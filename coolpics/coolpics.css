@@ -91,7 +91,7 @@
     }
     .menu {
       width: 100%;
-      border: black;
+      border: 3px solid black;
     }
     .menu > a {
       float: center; 
