@@ -94,6 +94,6 @@
       border: 3px solid black;
     }
     .menu > a {
-      float: center; 
+      text-align: center; 
     }
 }
