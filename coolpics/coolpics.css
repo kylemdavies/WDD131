@@ -89,4 +89,10 @@
     button {
         display: none;
     }
+    .menu {
+      width: 100%;
+    }
+    .menu > a {
+      text-align: center;
+    }
 }
