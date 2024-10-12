@@ -93,6 +93,6 @@
       width: 100%;
     }
     .menu > a {
-      text-align: center; 
+      float: center; 
     }
 }
