@@ -23,6 +23,34 @@
     width: 100%;
   }
 
+  .viewer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.75);
+    height: 100%;
+  }
+  .close-viewer {
+    position: absolute;
+    top: 50px;
+    right: 250px;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+  }
+  .viewer>img {
+    max-width: 80%;
+    max-height: 80%;
+  }
+
   header
   {
     background-color: var(--primary-color);
@@ -67,7 +95,7 @@
     box-shadow: 0px 8px 16px 0px darkslategrey;
   }
 
-  button
+  .menuButton
   {
     border: none;
     background-color: var(--primary-color);
@@ -85,11 +113,12 @@
     text-align: center;
   }
   .menu:hover .menuContent {display: block;}
-  .dropdown-content a {
-    color: black;
+  .menuContent a {
+    color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    background-color: var(--primary-color);
   }
 
 @media screen and (min-width:700px) {
@@ -105,11 +134,12 @@
       text-align: center;
     }
     .menu:hover .menuContent {display: block;}
-    .dropdown-content a {
-      color: black;
+    .menuContent a {
+      color: white;
       padding: 12px 16px;
       text-decoration: none;
       display: block;
+      background-color: var(--primary-color);
     }
 }
 
@@ -117,12 +147,11 @@
     .gallery {
         grid-template-columns: 33% 33% 33%;
     }
-    button {
+    .menuButton {
         display: none;
     }
     .menu {
       width: 100%;
-      border: 3px solid black;
     }
     .menuContent {
       display: block;
@@ -130,5 +159,9 @@
       box-shadow:none;
       position:inherit;
       text-align: center;
+    }
+    .menuContent a {
+      display: inline-block; /* Make menu items display horizontally */
+      color: white;
     }
 }
