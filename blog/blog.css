@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&display=swap');
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(7 , 1fr);
+    width: auto;
+    height: auto;
+    border: 1px solid;
+    column-gap: 5px;
+}
+
+.header {
+    grid-column: 1/8;
+}
+.title {
+    width:auto;
+    text-align: center;
+    grid-column: 1/8;
+    grid-row:1/2;
+    color: #2274A5;
+    font-family: 'Philosopher', sans-serif;
+}
+.bar {
+    grid-column: 2/7;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background-color: #2274A5;
+}
+.search {
+    grid-column: 5/6;
+    text-align: center;
+    font-family: 'Crimson Text', serif;
+    color: #FFD61F;
+    max-width: 20px;
+    margin: 0 auto;
+}
+.archive {
+    grid-column: 4/5;
+    text-align: center;
+    font-family: 'Crimson Text', serif;
+    color: #FFD61F;
+    max-width: 20px;
+    margin: 0 auto;
+}
+.about {
+    grid-column: 3/4;
+    text-align: center;
+    font-family: 'Crimson Text', serif;
+    color: #FFD61F;
+    max-width: 20px;
+    margin: 0 auto;
+}
+.links {
+    color: #FFD61F;
+    font-size: 22px;
+}
+
+.sort {
+    grid-column: 1/3;
+    grid-row: 2/auto;
+    margin: .5em;
+    border-right: 2px solid #FFD61F;
+}
+
+.library {
+    grid-column: 3/8;
+    grid-row:2/auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-row-gap: 10px;
+    margin-top: .5em;
+}
+
+.article{
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.images {
+    grid-column:1/2;
+    width: 250px;
+}
+
+.info {
+    grid-column: 2/3;
+    width:fit-content;
+    margin-right: .5em;
+    margin-left: .5em;
+    padding-left: .5em;
+    border-left: 1px solid #FFD61F;
+}
+
+.date {
+    margin-bottom: 0;
+}
+
+.orders {
+    margin-top: 0;
+}
+
+.description {
+    border: 2px solid #2274A5;
+    padding: .5em;
+}
+
+.skiptocontent {
+    position: fixed;  /* Make it always visible on top */
+    top: 10px;         /* Adjust the top position as needed */
+    left: 10px;         /* Adjust the left position as needed */
+    z-index: 999;      /* Ensure it's on top of other elements */
+    display: none; 
+  }
+  
+  .skiptocontent a {
+    background-color: #f0f0f0; /* Light background for better visibility */
+    color: #000;               /* Dark text for readability */
+    padding: 10px;              /* Add some padding for better click target */
+    text-decoration: none;     /* Remove underline */
+    font-weight: bold;        /* Make the text stand out */
+  }
+  
+  .skiptocontent a:focus-visible {
+    outline: 2px solid #2274A5;
+    display: block;
+  }
