@@ -25,7 +25,7 @@ const articles = [
 	  genre: 'Fantasy',
 	  stars:   
    '⭐⭐⭐⭐'
-	}
+	},
 	{
 		id: 3,
 		title: "Belgariad Book One: Pawn of Prophecy",
