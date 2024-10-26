@@ -63,11 +63,11 @@
     border-right: 2px solid #FFD61F;
 }
 
-fieldset
+#filter
 {
     position:fixed;
     height: 750px;
-    width: 165px;
+    width: 100%;
     top: 125px;
     overflow:auto;
 }
