@@ -122,14 +122,6 @@
     border: 2px solid #2274A5;
     padding: .5em;
 }
-
-.skiptocontent {
-    position: fixed;  /* Make it always visible on top */
-    top: 10px;         /* Adjust the top position as needed */
-    left: 10px;         /* Adjust the left position as needed */
-    z-index: 999;      /* Ensure it's on top of other elements */
-    display: none; 
-  }
   
 .skiptocontent a {
         padding: 6px;
