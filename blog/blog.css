@@ -61,6 +61,7 @@
     grid-row: 2/auto;
     margin: .5em;
     border-right: 2px solid #FFD61F;
+    background-attachment: fixed;
 }
 
 .library {
