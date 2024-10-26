@@ -31,35 +31,60 @@ const articles = [
   const library = document.querySelector('.library');
   
   function createArticleElement(article) {
+	// create article div
 	const articleElement = document.createElement('div');
 	articleElement.classList.add('article');
+	
+	//create div container for image
     bookImage = document.createElement('div');
 	bookImage.classList.add('book_image');
+
+	//create image with attribute and sources
 	const image = document.createElement('img');
 	image.classList.add('images');
 	image.setAttribute('src', article.imgSrc);
 	image.setAttribute('alt', article.imgAlt);
 	bookImage.appendChild(image);
+
 	const description = document.createElement('div');
 	description.classList.add('discription');
-	articleElement.appendChild(description);
+
 	const title = document.createElement('h2');
 	title.classList.add('title');
 	title.textContent = article.title;
+
 	const date = document.createElement('h3');
 	date.classList.add('date');
 	date.textContent = article.date;
+
 	const ages = document.createElement('h4');
 	ages.classList.add('ages');
 	ages.textContent = article.ages;
+
 	const genre = document.createElement('h5');
 	genre.classList.add('genre');
 	genre.textContent = article.genre;
+
 	const rating = document.createElement('h6');
 	rating.classList.add('rating');
 	rating.textContent = article.stars;
+
 	const summary = document.createElement('p');
+	summary.classList.add('summary');
+	summary.textContent = article.description;
+
+	description.appendChild(title);
+	description.appendChild(date);
+	description.appendChild(ages);
+	description.appendChild(genre);
+	description.appendChild(rating);
+	description.appendChild(summary);
+
+	articleElement.appendChild(bookImage);
+	articleElement.appendChild(description);
+
 	library.appendChild(articleElement);
+
   }
 
   window.addEventListener('DOMContentLoaded', () => {
