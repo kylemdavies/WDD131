@@ -131,15 +131,26 @@
     display: none; 
   }
   
-  .skiptocontent a {
-    background-color: #f0f0f0; /* Light background for better visibility */
-    color: #000;               /* Dark text for readability */
-    padding: 10px;              /* Add some padding for better click target */
-    text-decoration: none;     /* Remove underline */
-    font-weight: bold;        /* Make the text stand out */
-  }
-  
-  .skiptocontent a:focus-visible {
-    outline: 2px solid #2274A5;
-    display: block;
-  }
+.skiptocontent a {
+        padding: 6px;
+        position: absolute;
+        top: -40px;
+        left: 0px;
+        color: white;
+        border-right: 1px solid white;
+        border-bottom: 1px solid white;
+        border-bottom-right-radius: 8px;
+        background: #BF1722;
+        -webkit-transition: top .05s ease-in;
+        transition: top .5s ease-out;
+        z-index: 100;
+    }
+
+    .skiptocontent a:focus {
+        position:absolute;
+        left:0px;
+        top:0px;
+        outline-color:transparent;	
+        -webkit-transition: top .05s ease-in;
+        transition: top .05s ease-in;
+    }
