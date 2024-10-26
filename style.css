@@ -40,10 +40,10 @@
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {background-color: #ddd;}
 
-  h1
-  {
-    width: 100%;
-    text-align: center;
-  }
+h1
+{
+  width: 100%;
+  text-align: center;
+}
 
-  .show {display:block;}
+.show {display:block;}
