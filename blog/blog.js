@@ -38,7 +38,7 @@ const articles = [
 		ages: "12-16",
 		genre: "Fantasy",
 		stars: "⭐⭐⭐⭐⭐"
-		}
+	}
   ];
   
   const library = document.querySelector('.library');
