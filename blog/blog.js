@@ -68,23 +68,23 @@ const articles = [
 
 	const date = document.createElement('h3');
 	date.classList.add('date');
-	date.textContent = article.date;
+	date.textContent = "Date: " + article.date;
 
 	const ages = document.createElement('h4');
 	ages.classList.add('ages');
-	ages.textContent = article.ages;
+	ages.textContent = "Ages: " + article.ages;
 
 	const genre = document.createElement('h5');
 	genre.classList.add('genre');
-	genre.textContent = article.genre;
+	genre.textContent = "Genre: " + article.genre;
 
 	const rating = document.createElement('h6');
 	rating.classList.add('rating');
-	rating.textContent = article.stars;
+	rating.textContent = "Rating" + article.stars;
 
 	const summary = document.createElement('p');
 	summary.classList.add('summary');
-	summary.textContent = article.description;
+	summary.textContent = "Summary: \n" + article.description;
 
 	description.appendChild(title);
 	description.appendChild(date);
