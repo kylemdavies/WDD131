@@ -49,3 +49,9 @@ h1
 }
 
 .show {display:block;}
+
+#menuNav
+{
+  width: 100%;
+  grid-template-columns: 50% 50%;
+}
