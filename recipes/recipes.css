@@ -14,7 +14,10 @@ body
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    background-image: url(https://plus.unsplash.com/premium_photo-1681401569921-e3e99499bfe9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-image: url(https://st2.depositphotos.com/1177973/8193/i/450/depositphotos_81935296-stock-photo-open-recipe-book.jpg);
+    background-repeat: no-repeat; 
+    background-size: 100% 100%; 
+    background-attachment: fixed;
 }
 h1,h2,h3,h4,h5,h6
 {
@@ -37,15 +40,24 @@ header{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 15px;
 }
 #recipe-book-header
 {
     height: 100px;
     width: 100px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 10px solid #ffffff;
+    margin: 5px;
 }
 #page-title
 {
     font-size: 100px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 10px solid #ffffff;
+    margin: 5px;
 }
 
 /* Main */
@@ -81,6 +93,9 @@ main {
         margin: 25px;
         padding: 25px;
         border: black solid 1px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        margin: 5px;
       }
       
       .recipe {
@@ -116,6 +131,14 @@ footer
     align-items: center;
 }
 
+footer a
+{
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 10px solid #ffffff;
+    margin: 5px;
+}
+
 .social {
     display: flex;
     gap: 10px; /* Space between icons */
@@ -123,6 +146,10 @@ footer
 .social img 
 {
     width: 50px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 10px solid #ffffff;
+    margin: 5px;
 }
 
 @media only screen and (max-width: 750px) {
