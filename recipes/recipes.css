@@ -2,7 +2,12 @@
 
 :root
 {
- --headings: "Amatic SC", sans-serif;
+    --primary-color: #1B98E0;
+    --secondary-color: #59c3c3;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: Arial, Helvetica,sans-serif;
+    --secondary-font: "Amatic SC";
 }
 body
 {
@@ -12,7 +17,12 @@ body
 }
 h1,h2,h3,h4,h5,h6
 {
-    font-family: var(--headings);
+    font-family: var(--secondary-font);
+    color: var(--text-dark);
+}
+p, span
+{
+    color: var(--text-dark);
 }
 img
 {
@@ -88,6 +98,13 @@ main {
         padding: 20px;
       }
 
+      .recipe-name
+      {
+        color: var(--primary-color);
+        font-size: 40px;
+      }
+
+
 /* Footer */
 footer
 {  
@@ -107,3 +124,22 @@ footer
     width: 50px;
 }
 
+@media only screen and (max-width: 750px) {
+    .recipe {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #page-title {
+      font-size: 60px; /* Adjust font size for smaller screens */
+    }
+
+    #search-bar {
+        width: 250px;
+    }
+  
+    .social img {
+      width: 30px; /* Adjust social icon size for smaller screens */
+    }
+  }
