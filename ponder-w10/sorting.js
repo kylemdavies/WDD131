@@ -66,41 +66,66 @@ const hikes = [
       trailhead: [43.78555, -111.98996]
     }
   ];
-   const simpleList = ["oranges", "grapes", "lemons", "apples", "Bananas", "watermelons", "coconuts", "broccoli", "mango"];
-  
-   function compareFn(a,b) {
-    if (a > b) {
-      return -1;
-    } else if (a < b) {
-      return 1;
-    }
-   // a must be equal to b
-   return 0;
-  };
-  const anotherSort = simpleList.sort(compareFn);
 
-  function searchList(list, query) {
-    function searchCallback(string) {
-      return string.toLowerCase().includes(query.toLowerCase());
-    }
-    return list.filter(searchCallback);
+  function createHikeListItem(hike) {
+    const li = document.createElement('li');
+    li.innerHTML = `
+      <h3>${hike.name}</h3>
+      <img src="${hike.imgSrc}" alt="${hike.imgAlt}">
+      <p>${hike.distance} - ${hike.tags.join(", ")}</p>
+      <p>${hike.description}</p>
+    `;
+    return li;
   }
-  console.log(searchList(simpleList, "b"));
-  console.log(searchList(simpleList, "an"));
-
-  function searchList(list, q) {
+  
+  function displayHikes(filteredHikes) {
+    const ul = document.getElementById('hike-list');
+    ul.innerHTML = ''; // Clear existing list items
+  
+    filteredHikes.forEach(hike => {
+      const li = createHikeListItem(hike);
+      ul.appendChild(li);
+    });
+  }
+  
+  function searchList(list, query) {
     function searchCallback(item) {
+      if (!item || !item.name || !item.description || !item.tags) {
+        return false;
+      }
+  
+      const searchText = query.toLowerCase();
       return (
-        item.name.toLowerCase().includes(q.toLowerCase()) ||
-        item.description.toLowerCase().includes(q.toLowerCase()) ||
-        item.tags.find((tag) => tag.toLowerCase().includes(q.toLowerCase()))
+        item.name.toLowerCase().includes(searchText) ||
+        item.description.toLowerCase().includes(searchText) ||
+        item.tags.some(tag => tag.toLowerCase().includes(searchText))   
+  
       );
     }
-    const filtered = list.filter(searchCallback);
-
-    const sorted = filtered.sort((a, b) => a.distance > b.distance);
-    return sorted;
+  
+    return list.filter(searchCallback);
   }
+  
+  const searchBar = document.getElementById('search-bar');
+  const searchButton = document.getElementById('search-button');
+  
+  searchButton.addEventListener('click', () => {
+    const searchQuery = searchBar.value.trim();   
+  
+    if (!searchQuery) {
+      displayHikes(hikes); // Display all hikes if search bar is empty
+      return;
+    }
+  
+    const filteredHikes = searchList(hikes, searchQuery);
+    displayHikes(filteredHikes);
+  });
+  
+  window.addEventListener('DOMContentLoaded', () => {
+    displayHikes(hikes); // Initially display all hikes
+  });
   console.log(searchList(hikes, "yellowstone"));
   console.log(searchList(hikes, "moderate"));
   console.log(searchList(hikes, "al"));
+
+  
