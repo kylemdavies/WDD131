@@ -1,7 +1,7 @@
 :root {
-    --primary-color: #396e94;
-    --secondary-color: #e7c24f;
-    --accent1-color: #a42212;
+    --primary-color: #2E5876;
+    --secondary-color: #E2B328;
+    --accent1-color: #94050E;
     --accent2-color: white;
     --heading-font: "IM Fell French Canon SC";
     --paragraph-font: Lato, Helvetica, sans-serif;
@@ -63,4 +63,63 @@ hr {
     height: 3px;
     margin: 35px 0;
     background: var(--accent1-color);
+}
+
+table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    unicode-bidi: isolate;
+    border-spacing: 2px;
+    border-color: gray;
+}
+
+.colors {
+    width: 100%;
+    min-width: 350px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    unicode-bidi: isolate;
+    border-color: inherit;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    unicode-bidi: isolate;
+    border-color: inherit;
+}
+
+th {
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align: -internal-center;
+    unicode-bidi: isolate;
+}
+
+.colors th {
+    background-color: #999;
+}
+
+.primary {
+    background-color: var(--primary-color);
+}
+
+.secondary {
+    background-color: var(--secondary-color);
+}
+
+.accent1 {
+    background-color: var(--accent1-color);
+}
+
+.accent2 {
+    background-color: var(--accent2-color);
 }
