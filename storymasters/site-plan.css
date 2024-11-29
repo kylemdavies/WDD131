@@ -8,13 +8,13 @@
     --heading-font: "Inter, sans-serif";
     --paragraph-font: Lato, Helvetica, sans-serif;
     --headline-color-on-white: var(--primary-color);
-    --headline-color-on-color: white;
+    --headline-color-on-color: var(--accent2-color);
     --paragraph-color-on-white: var(--primary-color);
-    --paragraph-color-on-color: white;
+    --paragraph-color-on-color: var(--accent2-color);
     --paragraph-background-color: var(--primary-color);
-    --nav-link-color: var(--primary-color);
+    --nav-link-color: var(--accent2-color);
     --nav-background-color: var(--secondary-color);
-    --nav-hover-link-color: white;
+    --nav-hover-link-color: var(--accent2-color);
     --nav-hover-background-color: var(--primary-color);
 }
 body {
@@ -31,6 +31,7 @@ h1, h2, h3, h4, h5, h6 {
 
 header > h1, header > h2 {
     color: var(--headline-color-on-color);
+    background-color: var(--headline-color-on-white);
 }
 
 img {
