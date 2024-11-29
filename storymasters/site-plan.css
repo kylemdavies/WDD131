@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 :root {
     --primary-color: #2E5876;
     --secondary-color: #94050E;
     --accent1-color: #E2B328;
     --accent2-color: white;
-    --heading-font: "IM Fell French Canon SC";
+    --heading-font: "Inter, sans-serif";
     --paragraph-font: Lato, Helvetica, sans-serif;
     --headline-color-on-white: var(--primary-color);
     --headline-color-on-color: white;
