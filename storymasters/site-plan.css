@@ -29,9 +29,12 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--headline-color-on-white);
 }
 
+header {
+    background-color: var(--headline-color-on-white);
+}
+
 header > h1, header > h2 {
     color: var(--headline-color-on-color);
-    background-color: var(--headline-color-on-white);
 }
 
 img {
