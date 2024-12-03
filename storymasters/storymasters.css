@@ -15,6 +15,7 @@
     --nav-hover-link-color: var(--accent2-color);
     --nav-hover-background-color: var(--primary-color);
 }
+
 .show {display:block;}
 
 body {
@@ -117,26 +118,72 @@ body {
     background-color: var(--nav-hover-background-color);
   }
 
-  #hamburgerMenu {
-    display: none;
-  }
-
-  .dropdown-content.show {
-    display: block;
+  .dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    width: 100%;
   }
   
+  /* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+h1
+{
+  width: 100%;
+  text-align: center;
+}
+
+.show {display:block;}
+
+#menuNav
+{
+  width: 100%;
+  grid-template-columns: 50% 50%;
+}
+
+#hamburgerBtn {
+  display: none;
+}
+
   @media (max-width: 768px) {
-    #barMenu {
+    #menuBar {
       display: none;
     }
-    #hamburgerMenu {
+    #hamburgerBtn {
       display: block;
     }
-    #hamburgerMenuContainer {
-      display: none;
-    }
-    .show {display:block;}
-    .dropdown-content.show {
-        display: block;
-      }
   }

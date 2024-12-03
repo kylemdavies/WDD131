@@ -11,18 +11,21 @@
     <script src="storymasters.js" defer></script>
 </head>
 <body>
-    <nav id="barMenu">
-        <a href="">Menu</a>
-        <a href="">Character Creator</a>
-        <a href="">Updates</a>
-      </nav>
-      <nav id="hamburgerMenu">
-        <button id="hamburgerButton" onclick="hamburgerMenu()" class="dropbtn">&#9776;</button>
-        <div id="hamburgerMenuContainer" class="dropdown-content">
-            <a href="">Menu</a>
-            <a href="">Character Creator</a>
-            <a href="">Updates</a>
+  <nav id="menuNav">
+    <div id="menuBar">
+      <a href="">Home</a>
+      <a href="">Character Creator</a>
+      <a href="">Updates</a>
+    </div>
+    
+      <div class="dropdown">
+        <button id="hamburgerBtn" onclick="hamburgerMenu()" class="dropbtn">&#9776;</button>
+        <div id="hamburgerMenu" class="dropdown-content">
+          <a href="">Home</a>
+          <a href="">Character Creator</a>
+          <a href="">Updates</a>
         </div>
+      </div>
       </nav>
     <header>
         
