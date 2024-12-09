@@ -204,6 +204,17 @@ h1
   height:fit-content;
 }
 
+.character {
+  display: flex; /* Make the character container a flexbox */
+  flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
+}
+
+.character-personalities,
+.character-being {
+  flex: 1; /* Make both elements equally sized within the flexbox */
+  padding: 1em; /* Add some padding for readability */
+}
+
   @media (max-width: 768px) {
     #menuBar {
       display: none;
