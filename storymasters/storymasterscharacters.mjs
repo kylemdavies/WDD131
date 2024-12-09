@@ -50,3 +50,4 @@ const characters = [
         the city guard on occasion and has made friends with many of them.`
 	}
 ]
+export default characters
