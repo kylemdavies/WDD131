@@ -40,7 +40,7 @@ const characters = [
         bonds: "I'll never forget the crushing defeat my company suffered or the enemies who dealt it.",
         flaws: "My hatred of my enemies is blind and unreasoning.",
         traits: [
-            "Seond Wind", "Fighting Style: Interception", "Military Rank", "Alert"
+            "Seond Wind", "Fighting Style: Interception", "Military Rank", "Alert", "Darkvision"
         ],
         languages: [
             "Common", "Elvish"

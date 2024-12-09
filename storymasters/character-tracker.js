@@ -30,13 +30,15 @@ let n = 0;
     });
   }
 
-  function addList(list, itemBox) {
+  function addList(list, itemBox, listType) {
     list.forEach(item => {
       const button = document.createElement('button');
       button.classList.add('item-button');
       button.setAttribute('type', 'button');
       button.textContent = item;
-      button.addEventListener('click', () => filterByitem(item));
+      button.addEventListener('click', () => {if (listType = "traits") {
+        filterByTraits(item);
+      }});
       itemBox.appendChild(button);
     });
   }
@@ -54,13 +56,16 @@ function createcharacterListItem(character) {
             <h3 class="character-ideals">Ideals: ${character.ideals}</h3>
             <h3 class="character-bonds">Bonds: ${character.bonds}</h3>
             <h3 class="character-flaws">Flaws: ${character.flaws}</h3>
+            <div id="character-traits-${n}" class="traits-buttons-box">
+                <h3 class="character-traits">Traits: </h3>
+            </div>
         </div>
         <div class="character-being">
             <h3 class="character-species">Species: ${character.species}</h3>
             <h3 class="character-subspecies">Subspecies: ${character.subspecies}</h3>
         </div>
         <p class="character-description">${character.description}</p>
-        <div id="character-${n}" class="tag-buttons-box"></div>
+        <div id="character-tags-${n}" class="tag-buttons-box"></div>
     `;
     return characterDiv;
   }
@@ -72,7 +77,9 @@ function createcharacterListItem(character) {
     filteredCharacters.forEach(character => {
       const characterItem = createcharacterListItem(character);
       characterList.appendChild(characterItem);
-      const tagBox = document.getElementById(`character-${n}`);
+      const tagBox = document.getElementById(`character-tags-${n}`);
+      const traitsBox = document.getElementById(`character-traits-${n}`);
+      addList(character.traits,traitsBox,"traits")
       addTags(character.tags,tagBox);
       n++;
     });
@@ -81,8 +88,16 @@ function createcharacterListItem(character) {
 
   function filterByTag(tag) {
     const lowerCaseTag = tag.toLowerCase(); // Convert the tag to lowercase
-    const filteredCharacters = characters.filter(characcter => {
-      return characcter.tags.some(characcterTag => characcterTag.toLowerCase() === lowerCaseTag);
+    const filteredCharacters = characters.filter(character => {
+      return character.tags.some(characterTag => characterTag.toLowerCase() === lowerCaseTag);
+    });
+    displayCharacters(filteredCharacters);
+  }
+
+  function filterByTraits(trait) {
+    const lowerCaseTrait = trait.toLowerCase(); // Convert the trait to lowercase
+    const filteredCharacters = characters.filter(character => {
+      return character.traits.some(characterTrait => characterTrait.toLowerCase() === lowerCaseTrait);
     });
     displayCharacters(filteredCharacters);
   }
