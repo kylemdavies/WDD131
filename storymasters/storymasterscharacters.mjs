@@ -22,7 +22,10 @@ const characters = [
         ],
         backstory: 
         `Roaden was shund as a child and as such only found friendship on the streets, one time he got caught pilffering important documents from a noble man.
-        The noble man instead of punishing him had Roaden work for him as a spy and Enforcer`
+        The noble man instead of punishing him had Roaden work for him as a spy and Enforcer`,
+        tags: [
+            "PC"
+        ]
 	},
 	{
 		name: "Dominque (Dom)",
@@ -47,7 +50,8 @@ const characters = [
         ],
         backstory: 
         `Dom was an officer in the army of his city, the enemy got the jump on his unit and a lot of them died. Now he freelances for the city and serves with
-        the city guard on occasion and has made friends with many of them.`
+        the city guard on occasion and has made friends with many of them.`,
+        tags: "NPC"
 	}
 ]
 export default characters
