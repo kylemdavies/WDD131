@@ -51,7 +51,8 @@ const characters = [
         backstory: 
         `Dom was an officer in the army of his city, the enemy got the jump on his unit and a lot of them died. Now he freelances for the city and serves with
         the city guard on occasion and has made friends with many of them.`,
-        tags: "NPC"
+        tags: 
+        ["NPC"]
 	}
 ]
 export default characters
