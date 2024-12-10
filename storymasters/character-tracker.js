@@ -125,7 +125,11 @@ function createcharacterListItem(character) {
     displayCharacters(filteredCharacters);
   }
 
-  function addNewCharacter()
+window.addEventListener('DOMContentLoaded', () => {
+displayCharacters(characters);
+});
+
+function addNewCharacter()
   {
     let name = document.getElementById('character-name-input').content;
     let personality = document.getElementById('character-personality-input').content;
@@ -161,9 +165,5 @@ function createcharacterListItem(character) {
     newChar["languages"] = languages.split(", ");
     newChar["tags"] = traits.split(", ");
     characters.push(newChar);
-    displayCharacters(characters)
+    
   }
-
-window.addEventListener('DOMContentLoaded', () => {
-displayCharacters(characters);
-});
