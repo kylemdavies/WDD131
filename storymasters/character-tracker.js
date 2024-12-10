@@ -125,6 +125,45 @@ function createcharacterListItem(character) {
     displayCharacters(filteredCharacters);
   }
 
+  function addNewCharacter()
+  {
+    let name = document.getElementById('character-name-input').content;
+    let personality = document.getElementById('character-personality-input').content;
+    let ideals = document.getElementById('character-ideals-input').content;
+    let bonds = document.getElementById('character-bonds-input').content;
+    let flaws = document.getElementById('character-flaws-input').content;
+    let traits = document.getElementById('character-traits-input').content;
+    let species = document.getElementById('character-species-input').content;
+    let subspecies = document.getElementById('character-subspecies-input').content;
+    let job = document.getElementById('character-job-input').content;
+    let subjob = document.getElementById('character-subjob-input').content;
+    let background = document.getElementById('character-background-input').content;
+    let level = document.getElementById('character-level-input').content;
+    let backstory = document.getElementById('character-backstory-input').content;
+    let allies = document.getElementById('character-allies-input').content;
+    let languages = document.getElementById('character-languages-input').content;
+    let tags = document.getElementById('character-tags-input').content;
+    let newChar = {}
+    newChar["name"] = name;
+    newChar["personality"] = personality;
+    newChar["ideals"] = ideals;
+    newChar["bonds"] = bonds;
+    newChar["flaws"] = flaws;
+    newChar["species"] = species;
+    newChar["subspecies"] = subspecies;
+    newChar["job"] = job;
+    newChar["subjob"] = subjob;
+    newChar["background"] = background;
+    newChar["level"] = level;
+    newChar["backstory"] = backstory;
+    newChar["traits"] = traits.split(", ");
+    newChar["allies"] = allies.split(", ");
+    newChar["languages"] = languages.split(", ");
+    newChar["tags"] = traits.split(", ");
+    characters.push(newChar);
+    displayCharacters(characters)
+  }
+
 window.addEventListener('DOMContentLoaded', () => {
 displayCharacters(characters);
 });

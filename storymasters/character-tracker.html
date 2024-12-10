@@ -44,51 +44,51 @@
     <form id="char-input">
       <div class="character-personalities">
         <h3 class="character-name">Name: </h3>
-        <input class="character-name">
+        <input class="character-name" id="character-name-input">
         <h3 class="character-personality">Personality: </h3>
-        <input class="character-personality">
+        <input class="character-personality" id="character-personality-input">
         <h3 class="character-ideals">Ideal: </h3>
-        <input class="character-ideals">
+        <input class="character-ideals" id="character-ideals-input">
         <h3 class="character-bonds">Bond: </h3>
-        <input class="character-bonds">
+        <input class="character-bonds" id="character-bonds-input">
         <h3 class="character-flaws">Flaw: </h3>
-        <input class="character-flaws">
+        <input class="character-flaws" id="character-flaws-input">
         <div class="traits-buttons-box">
-            <h3 class="character-traits">Traits: </h3>
-            <input class="character-traits">
+          <h3 class="character-traits">Traits: </h3>
+          <span class="character-traits textarea" id="character-traits-input" role="textbox" contenteditable></span>
         </div>
     </div>
     <div class="character-being">
         <h3 class="character-species">Species: </h3>
-        <input class="character-species">
+        <input class="character-species" id="character-species-input">
         <h3 class="character-subspecies">Subspecies: </h3>
-        <input class="character-subspecies">
+        <input class="character-subspecies" id="character-subspecies-input">
         <h3 class="character-job">Class: </h3>
-        <input class="character-job">
-        <h3 class="character-subjob">Subclass: </h3>
+        <input class="character-job" id="character-job-input">
+        <h3 class="character-subjob" id="character-subjob-input">Subclass: </h3>
         <input class="character-subjob">
-        <h3 class="character-background">Background: </h3>
+        <h3 class="character-background" id="character-background-input">Background: </h3>
         <input class="character-background">
-        <h3 class="character-level">Level: </h3>
+        <h3 class="character-level" id="character-level-input">Level: </h3>
         <input class="character-level">
     </div>
     <div class="character-backgrounds">
         <h3 class="character-backstory">Backstory: </h3>
-        <span class="character-backstory textarea" role="textbox" contenteditable></span>
+        <span class="character-backstory textarea" id="character-backstory-input" role="textbox" contenteditable></span>
         <div class="allies-buttons-box">
             <h3 class="character-allies">Allies/Organizations: </h3>
-            <span class="character-allies textarea" role="textbox" contenteditable> Split by ", " Ex. Common, Dwarvish, Elvish </span>
+            <span class="character-allies textarea" id="character-allies-input" role="textbox" contenteditable> Split by ", " Ex. Common, Dwarvish, Elvish </span>
         </div>
         <div class="languages-buttons-box">
             <h3 class="character-languages">Languages: </h3>
-            <span class="character-languages textarea" role="textbox" contenteditable> Split by ", " Ex. Common, Dwarvish, Elvish </span>
+            <span class="character-languages textarea" id="character-languages-input" role="textbox" contenteditable> Split by ", " Ex. Common, Dwarvish, Elvish </span>
         </div>
     </div>
-    
     <div class="tag-buttons-box">
       <h3 class="character-tags">Additional Tags: </h3>
-      <span class="character-tags textarea" role="textbox" contenteditable> Split by ", " Ex. Common, Dwarvish, Elvish </span>
+      <span class="character-tags textarea" id="character-tags-input" role="textbox" contenteditable> Split by ", " Ex. Common, Dwarvish, Elvish </span>
     </div>
+    <button type="submit" onclick="addNewCharacter(), closePopUp()">Submit</button>
     </form>
   </div>
 </body>
