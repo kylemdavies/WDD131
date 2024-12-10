@@ -240,14 +240,19 @@ h1
 .tag-buttons-box
 {
   margin: 10px;
+  display: flex; /* Make the container a flex container */
+  flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+  flex-direction: column; /* Default to column layout */
 }
 
-.item-button
+.item-button, .tag-button
 {
   background-color: transparent;
   color: var(--accent2-color);
   margin: 3px;
   font-size: 16px;
+  border-radius: 5px;
+  border: solid 2px var(--accent2-color);
 }
 
   @media (max-width: 768px) {
@@ -262,6 +267,9 @@ h1
       width: 50px;
       top: 10px;
       left: 10px;
+      box-shadow: 1px 1px 1px black;
+      border-radius: 15px;
+      border: solid 2px black;
     }
     .dropdown {
       position: relative;
@@ -270,5 +278,9 @@ h1
     }
     .character {
       flex-direction: column; /* Added line for column layout */
+    }
+    .tag-buttons-box
+    {
+      flex-direction: row;
     }
   }

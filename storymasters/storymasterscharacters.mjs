@@ -54,7 +54,7 @@ const characters = [
         I am used to being one of the guards for the caravan but in our latest excursion there was an incident and I got injured just after the fork to Helm's Hold 
         and was told to rest and heal at Neverwinter till the caravan returns after next winter.`,
         tags: [
-            "PC", "Calashtar"
+            "PC", "Calimshan"
         ]
 	},
 	{
