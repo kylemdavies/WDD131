@@ -118,7 +118,7 @@ function createcharacterListItem(character) {
   }
 
   function filterByLanguages(language) {
-    const lowerCaseLanguage = language.toLowerCase(); // Convert the tanguage to lowercase
+    const lowerCaseLanguage = language.toLowerCase(); // Convert the language to lowercase
     const filteredCharacters = characters.filter(character => {
       return character.languages.some(characterLanguage => characterLanguage.toLowerCase() === lowerCaseLanguage);
     });

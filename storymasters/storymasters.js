@@ -15,3 +15,12 @@
       }
     }
   }
+
+  function divPopUp() {
+    document.getElementById("character-popup").style.display = "block";
+  }
+  
+  // Function to close the pop-up using the close button
+  function closePopUp() {
+    document.getElementById("character-popup").style.display = "none";
+  }

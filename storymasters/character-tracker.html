@@ -33,9 +33,63 @@
     <h1>Character Tracker</h1>
   </header>
   <hr>
+  <button id="create-char-btn" onclick="divPopUp()">Create Character</button>
   <div id="display-characters">
     <h2>Characters</h2>
     <ul id="character-list"></ul>
+  </div>
+  <div id="character-popup" style="display: none;">
+    <button class="close-button" type="button" onclick="closePopUp()">&times;</button>
+    <h2 class="colored">Create Character</h2>
+    <form id="char-input">
+      <div class="character-personalities">
+        <h3 class="character-name">Name: </h3>
+        <input class="character-name">
+        <h3 class="character-personality">Personality: </h3>
+        <input class="character-personality">
+        <h3 class="character-ideals">Ideal: </h3>
+        <input class="character-ideals">
+        <h3 class="character-bonds">Bond: </h3>
+        <input class="character-bonds">
+        <h3 class="character-flaws">Flaw: </h3>
+        <input class="character-flaws">
+        <div class="traits-buttons-box">
+            <h3 class="character-traits">Traits: </h3>
+            <input class="character-traits">
+        </div>
+    </div>
+    <div class="character-being">
+        <h3 class="character-species">Species: </h3>
+        <input class="character-species">
+        <h3 class="character-subspecies">Subspecies: </h3>
+        <input class="character-subspecies">
+        <h3 class="character-job">Class: </h3>
+        <input class="character-job">
+        <h3 class="character-subjob">Subclass: </h3>
+        <input class="character-subjob">
+        <h3 class="character-background">Background: </h3>
+        <input class="character-background">
+        <h3 class="character-level">Level: </h3>
+        <input class="character-level">
+    </div>
+    <div class="character-backgrounds">
+        <h3 class="character-backstory">Backstory: </h3>
+        <span class="character-backstory textarea" role="textbox" contenteditable></span>
+        <div class="allies-buttons-box">
+            <h3 class="character-allies">Allies/Organizations: </h3>
+            <span class="character-allies textarea" role="textbox" contenteditable> Split by ", " Ex. Common, Dwarvish, Elvish </span>
+        </div>
+        <div class="languages-buttons-box">
+            <h3 class="character-languages">Languages: </h3>
+            <span class="character-languages textarea" role="textbox" contenteditable> Split by ", " Ex. Common, Dwarvish, Elvish </span>
+        </div>
+    </div>
+    
+    <div class="tag-buttons-box">
+      <h3 class="character-tags">Additional Tags: </h3>
+      <span class="character-tags textarea" role="textbox" contenteditable> Split by ", " Ex. Common, Dwarvish, Elvish </span>
+    </div>
+    </form>
   </div>
 </body>
 </html>

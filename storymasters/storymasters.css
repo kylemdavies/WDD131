@@ -233,7 +233,8 @@ h1
 .character-backgrounds > h3,
 .traits-buttons-box > h3,
 .allies-buttons-box > h3,
-.languages-buttons-box > h3
+.languages-buttons-box > h3,
+.tag-buttons-box > h3
 {
   color: var(--accent2-color);
 }
@@ -253,6 +254,51 @@ h1
   font-size: 16px;
   border-radius: 5px;
   border: solid 2px var(--accent2-color);
+}
+
+#character-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--primary-color);
+  border: 1px solid #ccc;
+  padding: 20px;
+  z-index: 5;
+  width: 700px;
+  height: 350px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#char-input {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.textarea {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  resize: both;
+  min-height: 40px;
+  line-height: 20px;
+  max-width: 250px;
+}
+
+.textarea[contenteditable]:empty::before {
+  color: var(--accent2-color);
+}
+
+.close-button {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  background-color: inherit;
+  color: var(--accent2-color);
+  border-color: var(--accent2-color);
 }
 
   @media (max-width: 768px) {
