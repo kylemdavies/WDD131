@@ -158,24 +158,55 @@ window.addEventListener('DOMContentLoaded', () => {
 displayCharacters(characters);
 });
 
+function noneCheck(item) {
+  if (item = "") {
+    return "None";
+  }
+}
+
+function stringSplit(item) 
+{
+  if (item != "None")
+  {
+    console.log(item)
+    return item.split(", ");
+  }
+}
+
 function addNewCharacter()
   {
-    let name = document.getElementById('character-name-input').content;
-    let personality = document.getElementById('character-personality-input').content;
-    let ideals = document.getElementById('character-ideals-input').content;
-    let bonds = document.getElementById('character-bonds-input').content;
-    let flaws = document.getElementById('character-flaws-input').content;
-    let traits = document.getElementById('character-traits-input').content;
-    let species = document.getElementById('character-species-input').content;
-    let subspecies = document.getElementById('character-subspecies-input').content;
-    let job = document.getElementById('character-job-input').content;
-    let subjob = document.getElementById('character-subjob-input').content;
-    let background = document.getElementById('character-background-input').content;
-    let level = document.getElementById('character-level-input').content;
-    let backstory = document.getElementById('character-backstory-input').content;
-    let allies = document.getElementById('character-allies-input').content;
-    let languages = document.getElementById('character-languages-input').content;
-    let tags = document.getElementById('character-tags-input').content;
+    let name = document.getElementById('character-name-input').value;
+    let personality = document.getElementById('character-personality-input').value;
+    let ideals = document.getElementById('character-ideals-input').value;
+    let bonds = document.getElementById('character-bonds-input').value;
+    let flaws = document.getElementById('character-flaws-input').value;
+    let traits = document.getElementById('character-traits-input').value;
+    let species = document.getElementById('character-species-input').value;
+    let subspecies = document.getElementById('character-subspecies-input').value;
+    let job = document.getElementById('character-job-input').value;
+    let subjob = document.getElementById('character-subjob-input').value;
+    let background = document.getElementById('character-background-input').value;
+    let level = document.getElementById('character-level-input').value;
+    let backstory = document.getElementById('character-backstory-input').textContent;
+    let allies = document.getElementById('character-allies-input').value;
+    let languages = document.getElementById('character-languages-input').value;
+    let tags = document.getElementById('character-tags-input').value;
+    noneCheck(name);
+    noneCheck(personality);
+    noneCheck(ideals);
+    noneCheck(bonds);
+    noneCheck(flaws);
+    noneCheck(traits);
+    noneCheck(species);
+    noneCheck(subspecies);
+    noneCheck(job);
+    noneCheck(subjob);
+    noneCheck(background);
+    noneCheck(level);
+    noneCheck(backstory);
+    noneCheck(allies);
+    noneCheck(languages);
+    noneCheck(tags);
     let newChar = {}
     newChar["name"] = name;
     newChar["personality"] = personality;
@@ -189,10 +220,10 @@ function addNewCharacter()
     newChar["background"] = background;
     newChar["level"] = level;
     newChar["backstory"] = backstory;
-    newChar["traits"] = traits.split(", ");
-    newChar["allies"] = allies.split(", ");
-    newChar["languages"] = languages.split(", ");
-    newChar["tags"] = traits.split(", ");
+    newChar["traits"] = stringSplit(traits);
+    newChar["allies"] = stringSplit(allies);
+    newChar["languages"] = stringSplit(languages);
+    newChar["tags"] = stringSplit(tags);
     characters.push(newChar);
     displayCharacters(characters);
     closePopUp();
