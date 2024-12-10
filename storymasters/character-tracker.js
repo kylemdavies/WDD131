@@ -100,7 +100,7 @@ function createcharacterListItem(character) {
         <div id="character-tags-${n}" class="tag-buttons-box"></div>
     `;
     const removeButton = document.createElement('button');
-    removeButton.textContent = "Remove Character";
+    removeButton.innerHTML = `<i class="fa fa-trash"></i>`;
     removeButton.classList.add('remove-char-btn');
     characterDiv.appendChild(removeButton);
     
