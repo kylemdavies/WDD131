@@ -242,6 +242,27 @@ function addNewCharacter()
     closePopUp();
   }
 
+  const characterPopup = document.getElementById('character-popup');
+  let isDragging = false;
+  let offsetX, offsetY;
+  
+  characterPopup.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      offsetX = e.clientX - characterPopup.offsetLeft;
+      offsetY = e.clientY - characterPopup.offsetTop;
+  });
+  
+  document.addEventListener('mouseup', () => {
+      isDragging = false;
+  });
+  
+  document.addEventListener('mousemove', (e) => {
+      if (isDragging) {
+          characterPopup.style.left = (e.clientX - offsetX) + 'px';
+          characterPopup.style.top = (e.clientY - offsetY) + 'px';
+      }
+  });
+
 const hamburgerBtn = document.getElementById("hamburgerBtn")
 hamburgerBtn.addEventListener("click", hamburgerMenu)
 const ccharbtn = document.getElementById("create-char-btn")
