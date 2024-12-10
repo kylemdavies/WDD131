@@ -1,24 +1,6 @@
 import characters from "./storymasterscharacters.mjs";
 let n = 0;
 
-  function hamburgerMenu() {
-    document.getElementById("hamburgerMenu").classList.toggle("show");   
-  
-  };
-  window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn')) {
-      var dropdowns = document.getElementsByClassName("dropdown-content");   
-  
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      }
-    }
-  };
-
   function addTags(tags, tagBox) {
     tags.forEach(tag => {
       const button = document.createElement('button');
@@ -36,8 +18,16 @@ let n = 0;
       button.classList.add('item-button');
       button.setAttribute('type', 'button');
       button.textContent = item;
-      button.addEventListener('click', () => {if (listType = "traits") {
-        filterByTraits(item);
+      button.addEventListener('click', () => {switch (listType) {
+        case "traits":
+            filterByTraits(item)
+          break;
+        case "allies":
+            filterByAllies(item)
+          break;
+        case "languages":
+            filterByLanguages(item)
+          break;
       }});
       itemBox.appendChild(button);
     });
@@ -63,8 +53,21 @@ function createcharacterListItem(character) {
         <div class="character-being">
             <h3 class="character-species">Species: ${character.species}</h3>
             <h3 class="character-subspecies">Subspecies: ${character.subspecies}</h3>
+            <h3 class="character-job">Class: ${character.job}</h3>
+            <h3 class="character-subjob">Subclass: ${character.subjob}</h3>
+            <h3 class="character-background">Background: ${character.background}</h3>
+            <h3 class="character-level">Level: ${character.level}</h3>
         </div>
-        <p class="character-description">${character.description}</p>
+        <div class="character-backgrounds">
+            <h3 class="character-backstory">Backstory: ${character.backstory}</h3>
+            <div id="character-allies-${n}" class="allies-buttons-box">
+                <h3 class="character-allies">Allies/Organizations: </h3>
+            </div>
+            <div id="character-languages-${n}" class="languages-buttons-box">
+                <h3 class="character-languages">Languages: </h3>
+            </div>
+        </div>
+        
         <div id="character-tags-${n}" class="tag-buttons-box"></div>
     `;
     return characterDiv;
@@ -79,7 +82,11 @@ function createcharacterListItem(character) {
       characterList.appendChild(characterItem);
       const tagBox = document.getElementById(`character-tags-${n}`);
       const traitsBox = document.getElementById(`character-traits-${n}`);
+      const alliesBox = document.getElementById(`character-allies-${n}`);
+      const languagesBox = document.getElementById(`character-languages-${n}`);
       addList(character.traits,traitsBox,"traits")
+      addList(character.allies,alliesBox,"allies")
+      addList(character.languages,languagesBox,"languages")
       addTags(character.tags,tagBox);
       n++;
     });
@@ -98,6 +105,22 @@ function createcharacterListItem(character) {
     const lowerCaseTrait = trait.toLowerCase(); // Convert the trait to lowercase
     const filteredCharacters = characters.filter(character => {
       return character.traits.some(characterTrait => characterTrait.toLowerCase() === lowerCaseTrait);
+    });
+    displayCharacters(filteredCharacters);
+  }
+  
+  function filterByAllies(ally) {
+    const lowerCaseAlly = ally.toLowerCase(); // Convert the ally to lowercase
+    const filteredCharacters = characters.filter(character => {
+      return character.allies.some(characterally => characterally.toLowerCase() === lowerCaseAlly);
+    });
+    displayCharacters(filteredCharacters);
+  }
+
+  function filterByLanguages(language) {
+    const lowerCaseLanguage = language.toLowerCase(); // Convert the tanguage to lowercase
+    const filteredCharacters = characters.filter(character => {
+      return character.languages.some(characterLanguage => characterLanguage.toLowerCase() === lowerCaseLanguage);
     });
     displayCharacters(filteredCharacters);
   }

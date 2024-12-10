@@ -144,7 +144,7 @@ body {
   background-color: var(--secondary-color);
   min-width: 200px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  z-index: 2;
 }
 
 /* Links inside the dropdown */
@@ -207,12 +207,47 @@ h1
 .character {
   display: flex; /* Make the character container a flexbox */
   flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
+  z-index: 1;
+  box-shadow: 5px 5px 5px black;
+  border-radius: 15px;
+  border: solid 2px black;
+  margin: 25px;
+
 }
 
 .character-personalities,
-.character-being {
+.character-being,
+.character-backgrounds {
   flex: 1; /* Make both elements equally sized within the flexbox */
   padding: 1em; /* Add some padding for readability */
+}
+
+#display-characters {
+  background-color: var(--secondary-color);
+  padding: 25px;
+  border-radius: 10px;
+}
+#display-characters > h2,
+.character-personalities > h3,
+.character-being > h3,
+.character-backgrounds > h3,
+.traits-buttons-box > h3,
+.allies-buttons-box > h3,
+.languages-buttons-box > h3
+{
+  color: var(--accent2-color);
+}
+.tag-buttons-box
+{
+  margin: 10px;
+}
+
+.item-button
+{
+  background-color: transparent;
+  color: var(--accent2-color);
+  margin: 3px;
+  font-size: 16px;
 }
 
   @media (max-width: 768px) {
@@ -232,5 +267,8 @@ h1
       position: relative;
       display: inline-block;
       width: 100%;
+    }
+    .character {
+      flex-direction: column; /* Added line for column layout */
     }
   }
