@@ -38,7 +38,7 @@
     <ul id="character-list"></ul>
   </div>
   <div id="character-popup" style="display: none;">
-    <button class="close-button" type="button" onclick="closePopUp()">&times;</button>
+    <button id="close-button" class="close-button" type="button">&times;</button>
     <h2 class="colored">Create Character</h2>
     <form id="char-input">
       <div class="character-personalities">
@@ -87,7 +87,7 @@
       <h3 class="character-tags">Additional Tags: </h3>
       <span class="character-tags textarea" id="character-tags-input" role="textbox" contenteditable> Split by ", " Ex. Common, Dwarvish, Elvish </span>
     </div>
-    <button type="submit" onclick="addNewCharacter(), closePopUp()">Submit</button>
+    <button id="add-char-btn" type="button">Submit</button>
     </form>
   </div>
 </body>

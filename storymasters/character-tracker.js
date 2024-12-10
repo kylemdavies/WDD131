@@ -5,6 +5,7 @@ function hamburgerMenu() {
   document.getElementById("hamburgerMenu").classList.toggle("show");
 
 }
+
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
     var dropdowns = document.getElementsByClassName("dropdown-content");
@@ -193,5 +194,15 @@ function addNewCharacter()
     newChar["languages"] = languages.split(", ");
     newChar["tags"] = traits.split(", ");
     characters.push(newChar);
-    
+    displayCharacters(characters);
+    closePopUp();
   }
+
+const hamburgerBtn = document.getElementById("hamburgerBtn")
+hamburgerBtn.addEventListener("click", hamburgerMenu)
+const ccharbtn = document.getElementById("create-char-btn")
+ccharbtn.addEventListener("click", divPopUp)
+const addChar = document.getElementById("add-char-btn")
+addChar.addEventListener("click", addNewCharacter)
+const close = document.getElementById("close-button")
+close.addEventListener("click", closePopUp)
