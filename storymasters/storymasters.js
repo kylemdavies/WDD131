@@ -1,5 +1,3 @@
-import characters from "./storymasterscharacters.mjs";
-
   function hamburgerMenu() {
     document.getElementById("hamburgerMenu").classList.toggle("show");
   
