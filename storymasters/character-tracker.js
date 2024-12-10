@@ -99,6 +99,19 @@ function createcharacterListItem(character) {
         
         <div id="character-tags-${n}" class="tag-buttons-box"></div>
     `;
+    const removeButton = document.createElement('button');
+    removeButton.textContent = "Remove Character";
+    removeButton.classList.add('remove-char-btn');
+    characterDiv.appendChild(removeButton);
+    
+    removeButton.addEventListener('click', () => {
+      const characterIndex = characters.indexOf(character);
+      if (characterIndex !== -1) {
+        characters.splice(characterIndex, 1); // Remove character from array
+        displayCharacters(characters);  // Update displayed list
+      }
+    });
+
     return characterDiv;
   }
 

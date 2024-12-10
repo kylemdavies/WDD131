@@ -301,6 +301,13 @@ h1
   border-color: var(--accent2-color);
 }
 
+#create-char-btn {
+  background-color: inherit;
+  color: var(--accent1-color);
+  border-color: var(--accent1-color);
+  margin-bottom: 5px;
+}
+
   @media (max-width: 768px) {
     #menuBar {
       display: none;
