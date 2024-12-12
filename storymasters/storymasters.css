@@ -298,6 +298,7 @@ h1
   resize: both;
   min-height: 40px;
   line-height: 20px;
+  max-height: 500px;
   max-width: 250px;
 }
 
@@ -339,6 +340,11 @@ h1
 }
 i{
   color: white;
+}
+
+.char-inputs {
+  width: 100%;
+  height: 3%;
 }
 
 @media (max-width: 830px) {
