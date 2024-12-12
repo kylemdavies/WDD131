@@ -17,6 +17,9 @@
 }
 
 body {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   padding-top: 3em;
   font-size: 16px;
   color: var(--accent2-color);
@@ -144,7 +147,7 @@ body {
   background-color: var(--secondary-color);
   min-width: 200px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 2;
+  z-index: 5;
 }
 
 /* Links inside the dropdown */
@@ -269,11 +272,18 @@ h1
   background-color: var(--primary-color);
   border: 1px solid #ccc;
   padding: 20px;
-  z-index: 5;
-  width: 700px;
-  height: 350px;
+  z-index: 2;
+  width: 75%;
+  height: 70%;
   overflow-x: hidden;
   overflow-y: auto;
+}
+
+#add-char-btn {
+  justify-self: flex-end;
+  align-self: flex-end;
+  width: 55px;
+  height: 20px;
 }
 
 #char-input {
@@ -307,10 +317,12 @@ h1
 }
 
 #create-char-btn {
+  align-self: flex-end;
   background-color: inherit;
   color: var(--accent1-color);
   border-color: var(--accent1-color);
   margin-bottom: 5px;
+  width: 100px;
 }
 
 .remove-char-btn {
@@ -329,12 +341,21 @@ i{
   color: white;
 }
 
+@media (max-width: 830px) {
+  .remove-char-btn {
+    border-left: none;
+    border-top: solid 2px var(--accent2-color);
+    width: 100%;
+  }
+}
+
   @media (max-width: 768px) {
     #menuBar {
       display: none;
     }
     #hamburgerBtn {
       display: block;
+      z-index: 5;
     }
     #menuNav {
       display: block;
@@ -356,9 +377,5 @@ i{
     .tag-buttons-box
     {
       flex-direction: row;
-    }
-    .remove-char-btn {
-      border-left: none;
-      border-top: var(--accent2-color);
     }
   }
