@@ -1,6 +1,15 @@
 import characters from "./storymasterscharacters.mjs";
 let n = 0;
 
+const hamburgerBtn = document.getElementById("hamburgerBtn")
+hamburgerBtn.addEventListener("click", hamburgerMenu)
+const ccharbtn = document.getElementById("create-char-btn")
+ccharbtn.addEventListener("click", divPopUp)
+const addChar = document.getElementById("add-char-btn")
+addChar.addEventListener("submit", addNewCharacter)
+const close = document.getElementById("close-button")
+close.addEventListener("click", closePopUp)
+
 function hamburgerMenu() {
   document.getElementById("hamburgerMenu").classList.toggle("show");
 
@@ -262,12 +271,3 @@ function addNewCharacter()
           characterPopup.style.top = (e.clientY - offsetY) + 'px';
       }
   });
-
-const hamburgerBtn = document.getElementById("hamburgerBtn")
-hamburgerBtn.addEventListener("click", hamburgerMenu)
-const ccharbtn = document.getElementById("create-char-btn")
-ccharbtn.addEventListener("click", divPopUp)
-const addChar = document.getElementById("add-char-btn")
-addChar.addEventListener("click", addNewCharacter)
-const close = document.getElementById("close-button")
-close.addEventListener("click", closePopUp)
