@@ -357,4 +357,8 @@ i{
     {
       flex-direction: row;
     }
+    .remove-char-btn {
+      border-left: none;
+      border-top: var(--accent2-color);
+    }
   }

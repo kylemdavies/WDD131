@@ -4,18 +4,19 @@ const characters = [
         species: "Half-Elf",
         subspecies: "None",
         job: "Rogue",
-        subjob: "None",
+        subjob: "Phantom",
         background: "Spy (Enforcer)",
-        level: "1",
+        level: "3",
         personality: "I am always calm, no matter what the situation. I never raise my voice or let my emotions control me.",
         ideals: "People. I’m loyal to my friends, not to any ideals, and everyone else can take a trip down the Styx for all I care. (Neutral)",
         bonds: "I’m guilty of a terrible crime. I hope I can redeem myself for it.",
         flaws: "I turn tail and run when things look bad.",
         traits: [
-            "Darkvision", "Fey Ancestry"
+            "Darkvision", "Fey Ancestry", "Whispers of the Dead", "Sneak Attack", "Wails from the Grave",
+            "Thieves' Cant", "Steady Aim", "Cunning Action"
         ],
         languages: [
-            "Common", "Elvish", "Dwarvish"
+            "Common", "Elvish", "Dwarvish", "Thieves' Cant"
         ],
         allies: [
             "Landon Brush"
@@ -112,6 +113,37 @@ const characters = [
         tags: [
             "NPC", "Neverwinter"
         ]
-	}
+	},
+	{
+		name: "Salandor",
+        species: "Dragonborn",
+        subspecies: "Silver",
+        job: "Warlock",
+        subjob: "The Fathomless",
+        background: "Sailor",
+        level: "1",
+        personality: "My friends know they can rely on me, no matter what.",
+        ideals: "Respect. The thing that keeps a ship together is mutual respect between captain and crew. (Good)",
+        bonds: "Ruthless pirates murdered my captain and crewmates, plundered our ship, and left me to die. Vengeance will be mine.",
+        flaws: "Once someone questions my courage, I never back down no matter how dangerous the situation.",
+        traits: [
+            "Gift of the Sea", "Tentacle of the Deeps", "Expanded Spell List", "Damage Resistance",
+            "Breath Weapon", "Ship's Passage"
+        ],
+        languages: [
+            "Common", "Draconic"
+        ],
+        allies: [
+            "The Fathomless", "Portsman"
+        ],
+        backstory: 
+        `As he grew up Salandor travelled with friends and family as sailing merchants. One day pirates attacked,
+        the ship and the crew went down. As Salandor went down in the depths holding on to the last of his breath,
+        that is when he met The Fathomless, his patron. The Fathomless traded him breath and swore to help
+        with revenge on the pirates, in trade for knowledge of the lands above.`,
+        tags: [
+            "PC", "Sword Coast", "Cold"
+        ]
+	},
 ]
 export default characters
