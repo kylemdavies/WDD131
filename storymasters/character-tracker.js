@@ -91,8 +91,13 @@ function createcharacterListItem(character) {
         <div class="character-being">
             <h3 class="character-species">Species: ${character.species}</h3>
             <h3 class="character-subspecies">Subspecies: ${character.subspecies}</h3>
-            <h3 class="character-job">Class: ${character.job}</h3>
-            <h3 class="character-subjob">Subclass: ${character.subjob}</h3>
+            <div class="class-section">
+              <img src="${character.icon}" class="pic-on-color">
+              <div class="class-info">
+                <h3 class="character-job colored">Class: ${character.job}</h3>
+                <h3 class="character-subjob colored">Subclass: ${character.subjob}</h3>
+              </div>
+            </div>
             <h3 class="character-background">Background: ${character.background}</h3>
             <h3 class="character-level">Level: ${character.level}</h3>
         </div>
@@ -190,8 +195,39 @@ function stringSplit(item)
 {
   if (item != "None")
   {
-    console.log(item)
     return item.split(", ");
+  }
+}
+
+function iconSrc(job)
+{
+  switch (job.toLowerCase()) {
+    case "barbarian":
+      return "./images/class-icons-barbarian.png";
+    case "bard":
+      return "./images/class-icons-bard.png";
+    case "cleric":
+      return "./images/class-icons-cleric.png";
+    case "druid":
+      return "./images/class-icons-druid.png";
+    case "fighter":
+      return "./images/class-icons-fighter.png";
+    case "monk":
+      return "./images/class-icons-monk.png";
+    case "paladin":
+      return "./images/class-icons-paladin.png";
+    case "ranger":
+      return "./images/class-icons-ranger.png";
+    case "rogue":
+      return "./images/class-icons-rogue.png";
+    case "sorcerer":
+      return "./images/class-icons-sorcerer.png";
+    case "warlock":
+      return "./images/class-icons-warlock.png";
+    case "wizard":
+      return "./images/class-icons-wizard.png";
+    default:
+      return "";
   }
 }
 
@@ -213,6 +249,7 @@ function addNewCharacter()
     let allies = document.getElementById('character-allies-input').value;
     let languages = document.getElementById('character-languages-input').value;
     let tags = document.getElementById('character-tags-input').value;
+    let icon = iconSrc(job);
     noneCheck(name);
     noneCheck(personality);
     noneCheck(ideals);
@@ -230,6 +267,7 @@ function addNewCharacter()
     noneCheck(languages);
     noneCheck(tags);
     let newChar = {}
+
     newChar["name"] = name;
     newChar["personality"] = personality;
     newChar["ideals"] = ideals;
@@ -242,6 +280,7 @@ function addNewCharacter()
     newChar["background"] = background;
     newChar["level"] = level;
     newChar["backstory"] = backstory;
+    newChar["icon"] = icon;
     newChar["traits"] = stringSplit(traits);
     newChar["allies"] = stringSplit(allies);
     newChar["languages"] = stringSplit(languages);
