@@ -6,7 +6,7 @@ hamburgerBtn.addEventListener("click", hamburgerMenu)
 const ccharbtn = document.getElementById("create-char-btn")
 ccharbtn.addEventListener("click", divPopUp)
 const addChar = document.getElementById("add-char-btn")
-addChar.addEventListener("submit", addNewCharacter)
+addChar.addEventListener("click", addNewCharacter)
 const close = document.getElementById("close-button")
 close.addEventListener("click", closePopUp)
 
